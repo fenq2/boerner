@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/cartProduct.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -72,85 +74,347 @@
             </div>
           </div>
         </div>
-        <div class="catalog-prev">
+        <!-- caratProduct================== -->
+        <div class="cartProduct">
           <div class="container">
-            <p class="catalog-prev__title">Определяемся с задачами и возможностями</p>
-            <div class="catalog-prev__item item-catalog">
-              <div class="item-catalog__nav">
-                <p class="item-catalog__title">Овощерезка «Классика»</p>
-                <div class="item-catalog__slider">
-                  <div class="slider-prev slider-prev--active orange-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
+            <div class="cartProduct__title">Определяемся с задачами и возможностями</div>
+            <div class="cartProduct__body">
+              <div class="cartProduct__column item-product">
+                <a href="#" class="item-product__title">Овощерезка «Классика»</a>
+                <div class="item-product__color">
+                  <div class="tab-item active tab-orange">
+                    <div class="cartProduct-slider">
+                      <a href="static/images/content/cartProduct/01.jpg" rel="gallery1" class="cartProduct__full"><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></a>
+                      <a href="static/images/content/cartProduct/01.jpg" rel="gallery1" class="cartProduct__full"><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/02.jpg" alt=""></div></a>
+                      <a href="static/images/content/cartProduct/01.jpg" rel="gallery1" class="cartProduct__full"><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/03.jpg" alt=""></div></a>
                     </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
-                    </div>
+                    <!--класс av-no - показывает надпись "Нет в наличие"
+                        класс av-yes - показывает надпись "В наличие"
+                        в css ничего менять не требуется -->
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
                   </div>
-                  <div class="slider-prev green-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
+                  <div class="tab-item tab-green">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №4</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
                     </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
-                    </div>
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
                   </div>
-                  <div class="slider-prev purple-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
+                  <div class="tab-item tab-purple">
+                    <div class="cartProduct-slider">
+                      <!-- чтобы добавить больше картинок, нужно добавить ее в нутрь cartProduct-slider в таком формате <div><div><img></div></div>-->
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
                     </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
+                    <div class="item-product__availability av-no"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <!-- <div data-tab="4" class="tab-item">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №8</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №9</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №10</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
                     </div>
+                  </div> -->
+                  <div class="item-product__color__text">Цвет</div>
+                  <div class="item-product__color__tabnav">
+                    <!--свойство data-tab отвечает за связь иконки цвета с блоком картинок (tab-item),
+                        при добавлении цвета необходимо продублировать блок .tab-item с соответствующим знаечением data-tab-->
+                    <span data-tab="tab-orange" class="item-product__color__tabnavitem tab-orange tab__navitem active"></span>
+                    <span data-tab="tab-green" class="item-product__color__tabnavitem tab-green tab__navitem"></span>
+                    <span data-tab="tab-purple" class="item-product__color__tabnavitem tab-purple tab__navitem"></span>
+                    <!-- <span data-tab="4" class="item-product__color__tabnavitem tab__navitem"></span> -->
                   </div>
                 </div>
-                <div class="item-catalog__colors colors-catalog"><span class="colors-catalog__title">Цвет</span>
-                  <ul class="colors-catalog__list">
-                    <li class="colors-catalog__item colors-catalog__item--active" show-tab="orange-color"><span class="colors-catalog__item--inner colors-catalog__item--orange"></span></li>
-                    <li class="colors-catalog__item" show-tab="green-color"><span class="colors-catalog__item--inner colors-catalog__item--green"></span></li>
-                    <li class="colors-catalog__item" show-tab="purple-color"><span class="colors-catalog__item--inner colors-catalog__item--purple"></span></li>
-                  </ul>
+                <div class="item-product__price">2 750 руб./шт</div>
+                <div class="item-product__quantity">
+                  <form action="#" class="item-product__quantity__form">
+                    <div class="item-product__quantity__number">
+                      <span class="minus"></span>
+                      <input maxlength="3" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" autocomplete="off" type="text" name="form[]" class="input" value="1" size="5">
+                      <span class="plus"></span>
+                    </div>
+                    <button type="submit" class="item-product__quantity__btn">В корзину</button>
+                  </form>
                 </div>
               </div>
-              <div class="item-catalog__nav">
-                <p class="item-catalog__title">Овощерезка «Классика»</p>
-                <div class="item-catalog__slider">
-                  <div class="slider-prev slider-prev--active orange-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
-                    </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="slider-prev green-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
-                    </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="slider-prev purple-color">
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev1.png" alt=""></div>
-                    </div>
-                    <div class="slider-prev__item">
-                      <div class="slider-prev__img"><img src="static/images/content/slider-prev2.jpg" alt=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item-catalog__colors colors-catalog"><span class="colors-catalog__title">Цвет</span>
-                  <ul class="colors-catalog__list">
-                    <li class="colors-catalog__item colors-catalog__item--active colors-catalog__item--orange" show-tab="orange-color"></li>
-                    <li class="colors-catalog__item colors-catalog__item--green" show-tab="green-color"></li>
-                    <li class="colors-catalog__item colors-catalog__item--purple" show-tab="purple-color"></li>
+              <div class="cartProduct__column item-description">
+                <div class="item-description__title">Максимально бюджетно, но при этом чтобы она делала всё самое необходимое</div>
+                <div class="item-description__text">При покупке ваши основные мысли: «Попробуем, привыкнем, поменяем со временем, для начала достаточно и базовой модели». Ваш выбор — это овощерезка модельного ряда «Классика». Базовый комплект овощерезки «Классика» более 30 лет пользуется неизменной популярностью. Удобен, доступен, 12 видов нарезки. Корпус овощерезки выполнен из пищевого полистирола.</div>
+                <div class="item-description__variety">
+                  <div class="item-description__variety__title">Разновидности комплектации:</div>
+                  <ul class="item-description__variety__list">
+                    <li><a href="#" class="item-description__variety__links active">«Классика»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Классика плюс»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Практика» - разновидность комплекта «Классика» выпускается эксклюзивно для сети магазинов «Ашан».</a></li>
                   </ul>
                 </div>
               </div>
             </div>
+
+            <div class="cartProduct__body">
+              <div class="cartProduct__column item-product">
+                <a href="#" class="item-product__title">Овощерезка «Тренд»</a>
+                <div class="item-product__color">
+                  <div class="tab-item active tab-orange">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                    </div>
+                    <!--класс av-no - показывает надпись "Нет в наличие"
+                        класс av-yes - показывает надпись "В наличие"
+                        в css ничего менять не требуется -->
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <div class="tab-item tab-green">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №4</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                    </div>
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <div class="tab-item tab-purple">
+                    <div class="cartProduct-slider">
+                      <!-- чтобы добавить больше картинок, нужно добавить ее в нутрь cartProduct-slider в таком формате <div><div><img></div></div>-->
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                    <div class="item-product__availability av-no"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <!-- <div data-tab="4" class="tab-item">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №8</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №9</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №10</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                  </div> -->
+                  <div class="item-product__color__text">Цвет</div>
+                  <div class="item-product__color__tabnav">
+                    <!--свойство data-tab отвечает за связь иконки цвета с блоком картинок (tab-item),
+                        при добавлении цвета необходимо продублировать блок .tab-item с соответствующим знаечением data-tab-->
+                    <span data-tab="tab-orange" class="item-product__color__tabnavitem tab-orange tab__navitem active"></span>
+                    <span data-tab="tab-green" class="item-product__color__tabnavitem tab-green tab__navitem"></span>
+                    <span data-tab="tab-purple" class="item-product__color__tabnavitem tab-purple tab__navitem"></span>
+                    <!-- <span data-tab="4" class="item-product__color__tabnavitem tab__navitem"></span> -->
+                  </div>
+                </div>
+                <div class="item-product__price">3 740 руб./шт</div>
+                <div class="item-product__quantity">
+                  <form action="#" class="item-product__quantity__form">
+                    <div class="item-product__quantity__number">
+                      <span class="minus"></span>
+                      <input maxlength="3" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" autocomplete="off" type="text" name="form[]" class="input" value="1" size="5">
+                      <span class="plus"></span>
+                    </div>
+                    <button type="submit" class="item-product__quantity__btn">В корзину</button>
+                  </form>
+                </div>
+              </div>
+              <div class="cartProduct__column item-description">
+                <div class="item-description__title">Доступно по цене, при этом покупаем «раз и навсегда»</div>
+                <div class="item-description__text">При покупке ваши основные мысли: «Нужна простая в обращении, чтобы делала всё самое нужное, поскольку не хочу заморачиваться всякими расширенными функциями, но при этом хочу, чтобы, оправдывая свою цену, служила вечно. Ну, потом, может лет через 5 отвезу на дачу и посмотрю, что они там новенького выпустят».
+                  <br><br>Ваш выбор — овощерезка модельного ряда «Тренд». Самая популярная модель всех времён
+                  и народов, это улучшенная модификация базового комплекта «Классика». Те же 5 предметов
+                  в наборе и 12 видов нарезки. Основное отличие «Тренда» от «Классики» связано с прочностью
+                  и долговечностью материала. «Тренд» производится из ударопрочного и кислотостойкого ABS-пластика. Кроме того, «Тренд» имеет несколько конструктивных изменений, усиливающих раму. В результате это абсолютно «неубиваемый» комплект, и соотношение цена/качество однозначно в пользу покупателя.</div>
+                <div class="item-description__variety">
+                  <div class="item-description__variety__title">Разновидности комплектации:</div>
+                  <ul class="item-description__variety__list">
+                    <li><a href="#" class="item-description__variety__links active">«Тренд»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Тренд плюс»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Оптима» - разновидность комплекта «Тренд» выпускается эксклюзивно
+                      для сети магазинов «Зельгросс».</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Проксима» - разновидность комплекта «Тренд» выпускается эксклюзивно
+                      для сети магазинов «М-Видео».</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="cartProduct__body">
+              <div class="cartProduct__column item-product">
+                <div class="discount">-18%</div>
+                <a href="#" class="item-product__title">Овощерезка «Прима Плюс»</a>
+                <div class="item-product__color">
+                  <div class="tab-item active tab-orange">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01.jpg" alt=""></div></div>
+                    </div>
+                    <!--класс av-no - показывает надпись "Нет в наличие"
+                        класс av-yes - показывает надпись "В наличие"
+                        в css ничего менять не требуется -->
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <div class="tab-item tab-green">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №4</span><img src="static/images/content/cartProduct/01g.jpg" alt=""></div></div>
+                    </div>
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <div class="tab-item tab-purple">
+                    <div class="cartProduct-slider">
+                      <!-- чтобы добавить больше картинок, нужно добавить ее в нутрь cartProduct-slider в таком формате <div><div><img></div></div>-->
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                    <div class="item-product__availability av-no"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <!-- <div data-tab="4" class="tab-item">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №8</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №9</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №10</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                  </div> -->
+                  <div class="item-product__color__text">Цвет</div>
+                  <div class="item-product__color__tabnav">
+                    <!--свойство data-tab отвечает за связь иконки цвета с блоком картинок (tab-item),
+                        при добавлении цвета необходимо продублировать блок .tab-item с соответствующим знаечением data-tab-->
+                    <span data-tab="tab-orange" class="item-product__color__tabnavitem tab-orange tab__navitem active"></span>
+                    <span data-tab="tab-green" class="item-product__color__tabnavitem tab-green tab__navitem"></span>
+                    <span data-tab="tab-purple" class="item-product__color__tabnavitem tab-purple tab__navitem"></span>
+                    <!-- <span data-tab="4" class="item-product__color__tabnavitem tab__navitem"></span> -->
+                  </div>
+                </div>
+                <div class="item-product__price item-product__price--mrg">4 499 руб./шт</div>
+                <div class="item-product__price-old">5 499 руб./шт</div>
+                <div class="item-product__price-econom">Экономия 1 000 руб.</div>
+                <div class="item-product__quantity">
+                  <form action="#" class="item-product__quantity__form">
+                    <div class="item-product__quantity__number">
+                      <span class="minus"></span>
+                      <input maxlength="3" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" autocomplete="off" type="text" name="form[]" class="input" value="1" size="5">
+                      <span class="plus"></span>
+                    </div>
+                    <button type="submit" class="item-product__quantity__btn">В корзину</button>
+                  </form>
+                </div>
+              </div>
+              <div class="cartProduct__column item-description">
+                <div class="item-description__title">Не отставать от современных тенденций, хотим всё самое современное</div>
+                <div class="item-description__text">При покупке ваши основные мысли: «Нужно всё и сразу, хочу самое последнее с максимально расширенным функционалом. Экономить на том, чем пользуюсь каждый день, и что должно радовать очень и очень долго не буду. Люблю Бёрнера давно, хочу новинку».
+                  <br><br>Ваш выбор — овощерезка модельного ряда «Прима». Это принципиально новая модель.
+                  Завод запатентовал во всём мире и внедрил два изобретения по технологии крепления
+                  и перестановки вставок. Теперь у нас есть не 12, а 16 видов нарезки, современный дизайн
+                  и модные цвета. В дополнение к стандартным функциям прежних моделей, «Прима» имеет уникальные преимущества:
+                  <br><br>
+                  <ul class="item-description__variety__list">
+                    <li class="item-description__variety__links">Режет крупные и мелкие кубики в одно движение.</li>
+                    <li class="item-description__variety__links">Вставка 3,5 мм режет мелкие кубики и две толщины соломки: 3,5×3,5мм и 3,5×1,7мм.</li>
+                    <li class="item-description__variety__links">Вставка 7 мм режет крупные кубики и две толщины соломки: 7×7мм и 3,5×7мм.</li>
+                    <li class="item-description__variety__links">Теперь четыре толщины при нарезке колечками на безножевой вставке и пятое положение безножевой вставки – это «замок» для защиты ножей при хранении.</li>
+                  </ul></div>
+
+                <div class="item-description__variety">
+                  <div class="item-description__variety__title">Разновидности комплектации:</div>
+                  <ul class="item-description__variety__list">
+                    <li><a href="#" class="item-description__variety__links">«Прима»</a></li>
+                    <li><a href="#" class="item-description__variety__links active">«Прима плюс»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Прима Инстаграм»</a></li>
+                    <li><a href="#" class="item-description__variety__links">«Прима Бонус»</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="cartProduct__body">
+              <div class="cartProduct__column item-product">
+                <a href="#" class="item-product__title">Овощерезка «Профи»</a>
+                <div class="item-product__color">
+                  <div class="tab-item active tab-black">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/05.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/05g.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/05p.jpg" alt=""></div></div>
+                    </div>
+                    <!--класс av-no - показывает надпись "Нет в наличие"
+                        класс av-yes - показывает надпись "В наличие"
+                        в css ничего менять не требуется -->
+                    <div class="item-product__availability av-yes"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <div class="tab-item tab-purple">
+                    <div class="cartProduct-slider">
+                      <!-- чтобы добавить больше картинок, нужно добавить ее в нутрь cartProduct-slider в таком формате <div><div><img></div></div>-->
+                      <div><div class="item-product__image"><span>картинка товара №1</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №2</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №3</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                    <div class="item-product__availability av-no"><span class="no">Нет в</span><span class="yes">В</span> наличии</div>
+                  </div>
+                  <!-- <div data-tab="4" class="tab-item">
+                    <div class="cartProduct-slider">
+                      <div><div class="item-product__image"><span>картинка товара №8</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №9</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                      <div><div class="item-product__image"><span>картинка товара №10</span><img src="static/images/content/cartProduct/01p.jpg" alt=""></div></div>
+                    </div>
+                  </div> -->
+                  <div class="item-product__color__text">Цвет</div>
+                  <div class="item-product__color__tabnav">
+                    <!--свойство data-tab отвечает за связь иконки цвета с блоком картинок (tab-item),
+                        при добавлении цвета необходимо продублировать блок .tab-item с соответствующим знаечением data-tab-->
+                    <span data-tab="tab-black" class="item-product__color__tabnavitem tab__navitem tab-black active"></span>
+                    <span data-tab="tab-purple" class="item-product__color__tabnavitem tab__navitem tab-purple"></span>
+                    <!-- <span data-tab="4" class="item-product__color__tabnavitem tab__navitem"></span> -->
+                  </div>
+                </div>
+                <div class="item-product__price">6 600 руб./шт</div>
+                <div class="item-product__quantity">
+                  <form action="#" class="item-product__quantity__form">
+                    <div class="item-product__quantity__number">
+                      <span class="minus"></span>
+                      <input maxlength="3" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" autocomplete="off" type="text" name="form[]" class="input" value="1" size="5">
+                      <span class="plus"></span>
+                    </div>
+                    <button type="submit" class="item-product__quantity__btn">В корзину</button>
+                  </form>
+                </div>
+              </div>
+              <div class="cartProduct__column item-description">
+                <div class="item-description__title">Наполнить кухню лаконичными, изысканными и при этом
+                  профессионально-надёжными приборами и аксессуарами</div>
+                <div class="item-description__text">При покупке ваши основные мысли: «Моя кухня — это сталь и стиль, хочу, чтобы шарм и изыск был во всех предметах, которые стоят у меня на кухне на видном месте, которыми я пользуюсь каждый день, при этом я доверяю профессионалам-кулинарам и предпочитаю выбирать то,
+                  что они используют постоянно в работе на профессиональных кухнях. <br><br>Ваш выбор — овощерезка модельного ряда «Профи». Легендарная «Тёрка Бёрнера» в стальном корпусе — именно она выбор профессионалов и гурманов, любящих стиль на кухне. У модели «Профи» корпус из стали 18/10 и впервые в обязательную комплектацию добавлена четвёртая вставка «zero», которая даёт еще одну толщину нарезки и закрывает лезвия V-ножей при хранении. Итак, «Профи» это 6 предметов в наборе 14 видов нарезки, при этом вставки взаимозаменяемы с комплектом «Тренд».</div>
+                <div class="item-description__variety">
+                  <div class="item-description__variety__title">Разновидности комплектации:</div>
+                  <ul class="item-description__variety__list">
+                    <li><a href="#" class="item-description__variety__links active">«Профи»</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <div class="info-selection">
+          <div class="container">
+            <p class="info-selection__title">Выбираем золотую середину</p>
+            <div class="info-selection__block">
+              <p class="info-selection__text">Но у всех разный состав семьи и разные пищевые привычки. Кто-то
+                обожает жареную картошку, кто-то часто варит борщ, кто-то режет огромное количество яблок на сухофрукты, кто-то обожает утром идеальный нежный морковно-яблочный салатик, а некоторым важно порезать тонюсенький лимончик для коктейля. Но всех нас объединяют два желания — чтобы
+                «оно всё делалось само» и «соотношение цена/качество было в пользу покупателя».</p>
+              <p class="info-selection__text">
+                Именно поэтому немецкий завод уже собрал для вас «золотую середину»
+                и любой комплект будет востребован на кухне ежедневно — стоит только однажды попробовать. Вам осталось только решить какой цвет тёрки больше подходит к интерьеру вашей кухни: ведь она всегда будет стоять у вас на рабочем столе, а вы никогда больше не будете резать лук или капусту ножом, и уж тем более комбайном. Приятных покупок!
+              </p>
+            </div>
+            <div class="info-selection__sign">Made in Germany!</div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
         <div class="reviews">
           <div class="container">
             <p class="reviews__title">Отзывы наших клиентов</p>
@@ -239,6 +503,7 @@
       </div>
     </div>
     <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/jquery.fancybox.min.js"></script>
     <script src="static/js/libs.min.js"></script>
     <script src="static/js/main.js"></script>
   </body>
