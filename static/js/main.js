@@ -104,8 +104,4 @@ $('.tab__navitem').click(function() {
     $(this).closest('.item-product').find('.item-product__color .' + tabName).addClass('active').siblings().removeClass('active');
 });
 
-$(".cartProduct__full").fancybox({
-    openEffect	: 'none',
-    closeEffect	: 'none'
-});
 //========================//
