@@ -91,7 +91,7 @@
   position: relative;
   text-align: center;
 }
-.discount {
+.discount-item {
   position: absolute;
   top: 50px;
   right: 0;
@@ -261,7 +261,7 @@
   color: #888888;
   font-size: 14px;
   line-height: 24px;
-  margin: 380px 0px 5px 0px;
+  margin: 390px 0px 5px 0px;
 }
 
 @media (max-width: 560px) {
@@ -630,6 +630,10 @@
 .cartProduct-slider.slick-slider {
   width: 400px;
   position: relative;
+}
+
+.cartProduct-slider.slick-dots {
+  list-style: none;
 }
 
 .cartProduct-slider.slick-slider .slick-track {
